@@ -26,7 +26,7 @@ def calculate():
 # ---------------- ОКНО ----------------
 
 root = tk.Tk()
-root.title("Калькулятор")
+root.title("Calculator")
 root.geometry("320x420")
 root.resizable(False, False)
 
