@@ -1,6 +1,6 @@
 import tkinter as tk
 
-# ---------------- ФУНКЦИИ ----------------
+
 
 def add(symbol):
     display.insert(tk.END, symbol)
@@ -23,14 +23,14 @@ def calculate():
         display.insert(0, "Ошибка")
 
 
-# ---------------- ОКНО ----------------
+
 
 root = tk.Tk()
 root.title("Calculator")
 root.geometry("320x420")
 root.resizable(False, False)
 
-# ---------------- ЭКРАН ----------------
+
 
 display = tk.Entry(
     root,
@@ -41,7 +41,6 @@ display = tk.Entry(
 
 display.grid(row=0, column=0, columnspan=4, sticky="nsew", padx=10, pady=10)
 
-# ---------------- КНОПКИ ----------------
 
 buttons = [
     ["7", "8", "9", "/"],
@@ -79,7 +78,7 @@ for row in range(len(buttons)):
 
         button.grid(row=row + 1, column=col, padx=5, pady=5, sticky="nsew")
 
-# ---------------- РАСТЯГИВАНИЕ ----------------
+
 
 for i in range(4):
     root.grid_columnconfigure(i, weight=1)
@@ -87,7 +86,7 @@ for i in range(4):
 for i in range(6):
     root.grid_rowconfigure(i, weight=1)
 
-# ---------------- ЗАПУСК ----------------
+
 
 root.mainloop()
 
